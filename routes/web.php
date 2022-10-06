@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PendaftaranController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/daftar', function () {
+    return view('daftar');
+});
+
+Route::post('/daftar', [PendaftaranController::class, 'store'])->name('pendaftaran.store');

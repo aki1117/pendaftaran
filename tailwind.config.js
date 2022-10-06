@@ -1,7 +1,15 @@
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = {
-    content: ['./resources/**/*.blade.php', './vendor/filament/**/*.blade.php'],
+    darkMode: "class",
+    content: [
+        "./resources/**/*.blade.php",
+        "./vendor/filament/**/*.blade.php",
+        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
+        "./storage/framework/views/*.php",
+        // "./resources/views/**/*.blade.php",
+        "./node_modules/flowbite/**/*.js",
+    ],
     theme: {
         extend: {
             colors: {
@@ -13,7 +21,8 @@ module.exports = {
         },
     },
     plugins: [
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/typography'),
+        require("@tailwindcss/forms"),
+        require("@tailwindcss/typography"),
+        require("flowbite/plugin"),
     ],
-}
+};

@@ -37,8 +37,9 @@ class PendaftaranResource extends Resource
                 Card::make()->schema([
                     SpatieMediaLibraryFileUpload::make('foto')->collection('pendaftarans'),
                     TextInput::make('nama')->label('Nama'),
-                    TextInput::make('daerah_pemilihan'),
+                    TextInput::make('daerah-pemilihan'),
                     TextInput::make('nik')->label('NIK'),
+                    TextInput::make('no-telepon')->label('No Telepon'),
                     TextInput::make('tempat-lahir'),
                     DatePicker::make('tanggal-lahir'),
                     Select::make('jenis-kelamin')->options([
@@ -77,8 +78,9 @@ class PendaftaranResource extends Resource
                 SpatieMediaLibraryImageColumn::make('foto')->collection('pendaftarans'),
                 TextColumn::make('id')->sortable(),
                 TextColumn::make('nama')->sortable(),
-                TextColumn::make('daerah_pemilihan')->sortable(),
-                TextColumn::make('nik')->sortable()->label('NIK'),
+                TextColumn::make('daerah-pemilihan')->sortable(),
+                TextColumn::make('nik')->label('NIK'),
+                TextColumn::make('no-telepon')->sortable()->label('No Telepon'),
                 TextColumn::make('tempat-lahir')->sortable(),
                 TextColumn::make('tanggal-lahir')->sortable(),
                 TextColumn::make('jenis-kelamin')->sortable(),
