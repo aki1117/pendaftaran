@@ -12,6 +12,7 @@ use PhpParser\Node\Stmt\Label;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DatePicker;
@@ -62,10 +63,10 @@ class PendaftaranResource extends Resource
                     TextInput::make('s1'),
                     TextInput::make('s2'),
                     TextInput::make('s3'),
-                    TextInput::make('riwayat-diklat'),
-                    TextInput::make('riwayat-organisasi'),
-                    TextInput::make('riwayat-pekerjaan'),
-                    TextInput::make('riwayat-penghargaan'),
+                    Textarea::make('riwayat-diklat'),
+                    Textarea::make('riwayat-organisasi'),
+                    Textarea::make('riwayat-pekerjaan'),
+                    Textarea::make('riwayat-penghargaan'),
 
                 ])
             ]);
